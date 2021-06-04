@@ -1,0 +1,20 @@
+<p>salary-details works!</p>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputName1">Employee Name:</label>
+      <input type="text" class="form-control" name="empName" id="empName" [(ngModel)]="employee_name" placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Salary in USD</label>
+      <input type="number" class="form-control" name="empSal" id="empSal" [(ngModel)]="employee_salary" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Deductions in %</label>
+        <input type="number" class="form-control" name="empDeduct" id="empDeduct" [(ngModel)]="employee_deductions" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary"  (click)="onSubmit()">Login</button>
+    <div class="alert alert-primary" role="alert">
+        {{salary_after_deduct}}
+      </div>
+</form>
